@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sekolah</title>
+  <style>
+    
+footer {
+  width: 100%;               
+  background-color: #333; 
+  color: #fff;               
+  text-align: center;         
+  padding: 15px 0;           
+  font-size: 14px;            
+  letter-spacing: 0.5px;     
+}
+
+footer p {
+  margin: 0;                  
+}
+
+    
+    h2 { color: #004080; }
+
+  /* Table Jadwal Pelajaran — CSS Styling */
+.jadwal {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.jadwal thead {
+  background-color: #0066cc; /* warna header */
+  color: white;
+}
+
+.jadwal th,
+.jadwal td {
+  padding: 12px 8px;
+  border: 1px solid #d1d5db;
+  text-align: center;
+}
+
+.jadwal th {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.jadwal tbody tr:nth-child(even) {
+  background-color: #f3f6fa; /* baris genap latar terang */
+}
+
+.jadwal tbody tr:hover {
+  background-color: #e6f2ff; /* highlight baris saat hover */
+}
+
+.jadwal td.subject {
+  text-align: left; /* jika ada kolom mata pelajaran agar rata kiri */
+}
+
+/* Responsif: pada layar sempit, tabel bisa scroll horizontal */
+@media (max-width: 100%) {
+  .jadwal {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .jadwal th, .jadwal td {
+    padding: 10px 6px;
+  }
+}
+
+  :root {
+    --bg: #f4f7fa;
+    --card: #ffffff;
+    --primary: #004080;
+    --accent: #0066cc;
+    --text: #1f2937;
+    --text-muted: #6b7280;
+    --border: #cbd5e1;
+    --radius: 6px;
+    --transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+}
+
+h3 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .node {
+        width: 120px;
+        margin: 4px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .node {
+        width: 110px;
+        font-size: 0.85rem;
+    }
+}
+  
+
+  :root {
+  --card-bg: #ffffff;
+  --primary: #0066cc;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --transition: 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+
+.news-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.news-item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.news-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.news-item .meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.news-item h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.news-item p {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.news-item .btn-detail {
+  align-self: start;
+  text-decoration: none;
+  background: var(--primary);
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.news-item .btn-detail:hover {
+  background: #005bb5; /* variasi biru gelap */
+}
+
+@media (max-width: 600px) {
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+  :root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary: #0066cc;        /* form pendaptaran */
+  --primary-dark: #004080;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --transition: 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.form-message {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+  :root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary: #0066cc;
+  --primary-dark: #004080;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --radius: 10px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --transition: 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+
+.kegiatan-section {
+  display: flex;
+  flex-wrap: wrap;     
+  justify-content: center;  
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  flex: 1 1 250px;     
+  max-width: 300px;    
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+
+
+
+
+.kegiatan-section {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.kegiatan-list, .prestasi-list {
+  list-style-type: disc;
+  padding-left: 10px;
+  color: var(--text);
+}
+
+.kegiatan-list li, .prestasi-list li {
+  margin-bottom: 8px;
+}
+
+/* Galeri foto */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 1 1 45%;
+  max-width: 45%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform var(--transition);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .gallery-item {
+    max-width: 100%;
+  }
+}
+
+  /* Bagian slogan */
+.slogan-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f4f7fb; /* abu muda biar kontras */
+}
+
+.slogan-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-top: 5px solid #004080; /* aksen biru */
+}
+
+.slogan-card h2 {
+  font-size: 24px;
+  color: #004080; /* biru sesuai nav/footer */
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.slogan-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+  </style>
+
+    <!-- Navigasi -->
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logoz.png" alt="Logo Sekolah" class="logo-img">
+      <span class="logo-text">MA ZAINABIYAH</span>
+    </div>
+      <span class="toggle-btn" onclick="toggleMenu()">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#profil">Profil</a>
+      <a href="#akademik">Akademik</a>
+      <a href="#kesiswaan">Kesiswaan</a>
+      <a href="#ppdb">PPDB</a>
+      <a href="#berita">Berita</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+
+  <!-- Logo -->
+  <style>
+.logo-container {
+  display: flex;
+  align-items: center;   /* supaya sejajar vertikal */
+  gap: 10px;             /* jarak logo dan teks */
+}
+
+.logo-img {
+  height: 40px;          /* ukuran logo */
+  width: auto;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+ </style>
+ <!-- Header -->
+  <header>
+    <section class="slogan-section">
+  <div class="slogan-card">
+    <h2>“Berilmu, Berakhlak, dan Berprestasi”</h2>
+
+  </div>
+</section>
+  </header>
+  
+ 
+
+<style>
+  
+/* === NAVBAR STYLE === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white; /* pastikan body default putih */
+}
+
+.navbar {
+  width: 100%;
+  background: #004080; /* biru full */
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  /* Default navbar (desktop) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004080;
+  color: white;
+  padding: 12px 20px;
+}
+
+.nav-links {
+  display: flex; /* selalu tampil di desktop */
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* warna hover */
+}
+
+/* Tombol toggle disembunyikan di desktop */
+.toggle-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mode Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* default sembunyi */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #004080;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex; /* tampil kalau aktif */
+  }
+
+  .toggle-btn {
+    display: block; /* tombol hanya di HP */
+  }
+}
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+
+/* Konten halaman */
+   /* Biar tidak ada geser kanan */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar full */
+nav {
+  width: 100%;
+  background: #004080;
+  color: white;
+  padding: 12px 20px;
+  box-sizing: border-box; /* biar padding tidak bikin melebar */
+}
+
+
+
+/* Responsif untuk HP */
+    @media (max-width: 600px) {
+      section {
+        padding: 15px;
+        max-width: 95%;   /* hampir penuh layar HP */
+      }
+
+      /* Navbar */
+.navbar {
+  width: 100%;              /* penuh kiri-kanan */
+  background: #004080;      /* biru */
+  color: white;
+  padding: 12px 20px;       /* jarak dalam */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+      .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: #0066cc; /* biru terang */
+}
+
+/* Toggle Button */
+.toggle-btn {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+
+/* Mobile Style */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    background: #004080;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+}
+
+
+
+
+
+
+.logo {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+
+      /* Tombol utama */
+.btn-detail {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+/* Overlay popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s;
+}
+
+/* Isi popup */
+.popup-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  animation: slideUp 0.5s ease;
+}
+
+/* Tombol close */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #666;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #000;
+  transform: rotate(90deg);
+}
+
+/* Gambar di dalam popup */
+.gambar-detail {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+      // Fungsi untuk membuka popup
+function bukaDetail() {
+  const popup = document.getElementById("popup-detail");
+  popup.style.display = "flex";
+  document.body.style.overflow = "hidden"; // nonaktifkan scroll saat popup terbuka
+}
+
+// Fungsi untuk menutup popup
+function tutupDetail() {
+  const popup = document.getElementById("popup-detail");
+  popup.style.animation = "fadeOut 0.4s";
+  setTimeout(() => {
+    popup.style.display = "none";
+    popup.style.animation = "fadeIn 0.4s";
+    document.body.style.overflow = "auto";
+  }, 400);
+}
+
+
+
+</style>
+<script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+      </script>
+
+
+  <!-- Halaman Utama -->
+    <div class="content">
+  <section id="home">
+    <h2>Selamat Datang</h2>
+    <p>Sambutan Kepala Sekolah: <br> <br>Assalamu'alaikum wr.wb, Alhamdulillah puji dan syukur kita Panjatkan kehadirat Allah SWT atas segala limpahan dan rahmat NYA. Salawat beserta salam semoga tercurahkan kepada Nabi Muhammad Keluarga, dan Sahabatnya, dengan Penuh rasa syukur, saya menyampaikan Salam
+
+di Website resmi Madrasah Aliyah Zainabiyah, kehadiran Website ini merupakan salah satu bentuk komitmen Madrasan dalam memberikan layanan Informasi dan Publikasi yang cepat terbuka, dan dapat di akses oleh seluruh warga Madrasan maupun masyarakat luas,
+
+melalui website ini kami berharap :      <br>
+1) Menjadi sarana komunikasi dan informasi antara. Madrasah, Peserta didik, orang tua dan masyarakat.
+      <br>
+2)
+
+Menyajikan kegiatan akademik maupun non akademik yang mencerminkan Karakter Islami dan Prestasi siswa.
+      <br>
+3)
+
+Meningkatkan keterbukaan Informasi serta memperkuat citra Positif Madrasah sebagai lembaga Islam yang unggul dan berkarakter.
+      <br> <br>
+Kami menyadari banwa Perkembangan teknologi digital saat ini menuntut dunia Pendidikan untuk terus berinofasi. Oleh karena itu Madrasah senantiasa berupaya menghadirkan layanan Pendidikan yang adaptif, berkualitas, dan berorientasi Pada pembentukan generasi beriman, berlilmu, Serta Berahlakul Karimah.
+
+Akhir kata kami mengajak seluruh Pihak untuk bersama-sama, mendukung Program-program Madrasah demi terwujudnya Pendidikan yang berkuaulitas dan bermartabat.
+
+Semoga website ini memberikan manfaat untuk kita semua. <br>
+      <br>
+Hormat saya Kepala Madrasah
+      <br>
+Teti Nurbaeti Spd.i</p>
+  </section>
+
+  <!-- Profil Sekolah -->
+  <section id="profil">
+    <h2>Profil Sekolah</h2>
+    <h3>Sejarah</h3>
+    <p>Yayasan Aliyah Zainabiyah resmi berdiri pada tahun 2008 di bawah naungan Yayasan Pendidikan Zainabiyah pendirian Madrasah ini dilatar belakangi oleh kebutuhan masyarakat akan lembaga Pendidikan Islam yang mampu memadukan Ilmu Pengetahuan umum dan Ilmu Agama serta membentuk imigrasi yang berahlak mulia dan berperestasi  dan siap menghadapi perkembangan jaman pada awal apresiasikannya MA Zainabiyah hanya memiliki jumlah siswa sarana prasarana yang sangat terbatas MA Zainabiyah ini didirikan oleh keluarga Ibu Zaenab,beliau adalah salah satu Keluarga yang mengimpakan hartanya di bidang Pendidikan,Pendidikan yang bernama Yayasan Pendidikan Islam Zainabiyah,Yayasan Pendidikan Islam Zainabiyah ini di naungi beberapa lembaga Islam di Zainabiyah pada awal berdirinya ini bersatu dengan MTs Zainabiyah,MTs Zainabiyah dilaksanakan pada pagi hari kemudian di siang hari nya adalah Pendidikan MA Zainabiyah oprasional MA Zainabiayah itu masih bergabung dengan MTs Zainabiyah namun berkat dukungan Yayasan Lembaga Pendidikan serta partisipasi aktif dari masyarakat Madrasah ini akhirnya bisa berdiri sendiri di tanah sendiri kemudian dari tahun ketahun hingga kini,MA Zainabiyah telah mengalami berbagai kemajuan dalam aspek akademik maupun non akademik dengan di tunjak  oleh tenaga tenaga Pendidikan yang kompeten dan Fasilitas yg mulai memadai sebagai salah satu Lembaga Islam tingkat menengah MA Zainabiyah senantiasa berkomitmen untuk melaksanakan  </p></p>
+    <h3>Visi & Misi</h3>
+    <p><b>Visi:</b> "Unggul Dalam Iptek, Beriman, Mandiri Serta Berwawasan Lingkungan"</p>
+    <p><b>Misi:</b> Lima Misi Ma Zainabiyah Telah Ditetapkan Sebagai Berikut:
+      <br>1. Mewujudkan Pendidikan Yang Berkualitas
+      <br>2. Meningkatkan Prestasi Dibidang Akademik, Dan Non Akademik
+      <br>3. Meningkatkan Akhlaq, Budi Pekerti Yang Dapat Diterapkan Dalam Kehidupan
+      <br>4. Meningkatkan Kemampuan Dalam IPTEK
+      <br>5. Melestarikan Lingkungan Madrasah Maupun Lingkungan Luar Madrasah</p>
+    <!-- Struktur -->
+  
+  <h2>Struktur Organisasi</h2>
+<style>
+  :root{
+    --bg: #f6f9ff;
+    --card: #ffffff;
+    --primary: #0b63d4; /* biru */
+    --accent: #ffbf00;  /* kuning */
+    --muted: #6b7280;
+    --radius: 12px;
+    --gap: 12px;
+  }
+  
+
+
+
+  header{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+  }
+  header .title{
+    display:flex;
+    flex-direction:column;
+  }
+  h4{ margin:0; font-size:18px; color:var(--primary); }
+  p.lead{ margin:4px 0 0 0; color:var(--muted); font-size:13px; }
+
+  /* Search bar */
+  .controls{
+    display:flex;
+    gap:8px;
+    margin: 12px 0;
+  }
+  .search{
+    flex:1;
+    display:flex;
+    gap:8px;
+  }
+  .search input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid rgba(7,32,58,0.06);
+    background:linear-gradient(180deg, #fff, #fbfdff);
+    outline:none;
+    font-size:14px;
+  }
+  .filter{
+    min-width:46px;
+  }
+  .filter button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+  }
+
+  /* Grid of cards */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:var(--gap);
+    align-items:start;
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:12px;
+    box-shadow: 0 8px 22px rgba(12,34,60,0.06);
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(12,34,60,0.08); }
+
+  .head{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .avatar{
+    width:56px;
+    height:56px;
+    border-radius:12px;
+    flex:0 0 56px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:18px;
+    color:white;
+  }
+  .info{
+    flex:1;
+  }
+  .name{ font-weight:700; margin:0; font-size:15px; color:#07203a; }
+  .role{ margin:2px 0 0 0; color:var(--muted); font-size:13px; }
+
+  .meta{
+    margin-top:10px;
+    display:flex;
+    gap:8px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .meta .dept{ font-size:13px; color:var(--muted); }
+  .btn{
+    background:linear-gradient(90deg,var(--primary),#0a48b0);
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:13px;
+  }
+
+  /* hidden detail slide down */
+  .detail{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s cubic-bezier(.2,.9,.2,1), opacity .35s ease;
+    opacity: 0;
+  }
+  .detail.show{
+    opacity:1;
+  }
+  .detailInner{
+    padding-top:10px;
+    border-top:1px dashed rgba(7,32,58,0.06);
+    margin-top:10px;
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .detailInner dl{ margin:0; }
+  .detailInner dt{ font-weight:700; font-size:13px; margin-bottom:6px; }
+  .detailInner dd{ margin:0 0 8px 0; color:var(--muted); font-size:13px; }
+
+
+
+
+  /* small utility */
+  .role-badge{
+    display:inline-block;
+    padding:6px 8px;
+    background:linear-gradient(90deg, rgba(11,99,212,0.12), rgba(255,191,0,0.08));
+    border-radius:8px;
+    color:var(--primary);
+    font-weight:700;
+    font-size:12px;
+  }
+  .center{ text-align:center; color:var(--muted); padding:18px 0; }
+
+</style>
+
+<header>
+  <div class="title">
+    <h4>Struktur Organisasi Sekolah</h4>
+  </div>
+
+  <div class="role-badge">MA Zainabiyah</div>
+</header>
+
+<div class="controls">
+  <div class="search">
+    <input id="searchInput" placeholder="Cari nama atau jabatan..." />
+  </div>
+  <div class="filter">
+    <button id="clearBtn" title="Reset">Reset</button>
+  </div>
+</div>
+
+<main class="grid" id="grid">
+  <!-- Cards akan diisi lewat JS -->
+</main>
+
+<div class="center small muted" id="emptyHint" style="display:none">
+  Tidak ada hasil pencarian.
+</div>
+
+<script>
+/*
+  Data anggota: 19 orang
+  Struktur sample (bisa diubah sesuai nama/jabatan nyata)
+*/
+const members = [
+  { id:1, name:"Teti Nurbaeti, S.Pd.I", role:"Kepala Madrasah", dept:"Kepala Madrasah", phone:"0878-7222-7577", email:"apa@gmail.com" },
+  { id:2, name:"Tati Supriati, S.Pd.I", role:"Wakil Kepala Kesiswaan", dept:"Kesiswaan", phone:"0812-1111-0002", email:"apa@gmail.com" },
+  { id:3, name:"Ruri Rantau, M.Pd", role:"Wakil Kepala Kurikulum", dept:"Kurikulum", phone:"0812-1111-0003", email:"apa@gmail.com" },
+  { id:4, name:"M. Ali Rohmansyah, S.E", role:"Guru/Oprator", dept:"Guru/Oprator", phone:"0812-1111-0004", email:"apa@gmail.com" },
+  { id:5, name:"Uni Unaeni, S.E", role:"Guru Ekonomi", dept:"Guru Ekonomi", phone:"0812-1111-0005", email:"apa@gmail.com" },
+  { id:6, name:"Wiwin Winarti, S.Pd.I", role:"Guru Bahasa Inggris", dept:"Bahasa", phone:"0812-1111-0006", email:"apa@gmail.com" },
+  { id:7, name:"Sulasiah, S.Pd.I", role:"Guru Akidah & SKI", dept:"Akidah & SKI", phone:"0812-1111-0007", email:"apa@gmail.com" },
+  { id:8, name:"Juhariah, S.Pd.I", role:"Guru Fikih", dept:"Fikih", phone:"0812-1111-0008", email:"apa@gmail.com" },
+  { id:9, name:"Novi Lestari, S.Pd", role:"Guru Sejarah", dept:"Sejarah", phone:"0812-1111-0009", email:"apa@gmail.com" },
+  { id:10, name:"Dava Fatwa Abdalah, S.Pd", role:"Guru Biologi", dept:"Biologi", phone:"0812-1111-0010", email:"apa@gmail.com" },
+  { id:11, name:"Syifa Qurrotun Nabila, S.Pd", role:"Guru Sejarah Indoesia & PPKN", dept:"Sejarah Indoesia & PPKN", phone:"0812-1111-0011", email:"apa@gmail.com" },
+  { id:12, name:"Mahyarudin", role:"Guru Bahasa Arab", dept:"Bahasa", phone:"0812-1111-0012", email:"rudi@sma.sch.id" },
+  { id:13, name:"Aprilia Sueztina, S.Pd.I", role:"Guru Prakarya & SBK", dept:"Prakarya & SBK", phone:"0812-1111-0013", email:"apa@gmail.com" },
+  { id:14, name:"Esi Siswati, S.Pd", role:"Guru Sosiologi", dept:"Sosiologi", phone:"0812-1111-0014", email:"apa@gmail.com" },
+  { id:15, name:"Iis Trisnawati", role:"Guru Piket", dept:"Piket", phone:"0812-1111-0015", email:"apa@gmail.com" },
+  { id:16, name:"Vivi Apipah, S.Kom", role:"Guru/TU", dept:"Informatika", phone:"0812-1111-0016", email:"apa@gmail.com" },
+  { id:17, name:"Juhdi", role:"Petugas Keamanan", dept:"Keamanan", phone:"0812-1111-0017", email:"apa@gmail.com" },
+  { id:18, name:"Didi", role:"Petugas Kebersihan", dept:"Kebersihan", phone:"0812-1111-0018", email:"apa@gmail.com" },
+  { id:19, name:"Udin", role:"Petugas Kebersihan", dept:"Kebersihan", phone:"0812-1111-0019", email:"apa@gmail.com" }
+];
+
+// helper: create color from name (consistent avatar color)
+function colorFromName(name){
+  let hash = 0;
+  for (let i=0;i<name.length;i++) hash = name.charCodeAt(i) + ((hash<<5)-hash);
+  const h = Math.abs(hash) % 360;
+  return `linear-gradient(135deg, hsl(${h} 70% 45%), hsl(${(h+40)%360} 70% 55%))`;
+}
+
+// render cards
+const grid = document.getElementById('grid');
+function render(list){
+  grid.innerHTML = '';
+  if (!list.length) {
+    document.getElementById('emptyHint').style.display = 'block';
+    return;
+  } else {
+    document.getElementById('emptyHint').style.display = 'none';
+  }
+
+  list.forEach(member => {
+    const card = document.createElement('article');
+    card.className = 'card';
+    // initial max-height for detail will be set dynamically when open
+    card.innerHTML = `
+      <div class="head">
+        <div class="avatar" style="background:${colorFromName(member.name)}">${initials(member.name)}</div>
+        <div class="info">
+          <p class="name">${member.name}</p>
+          <p class="role">${member.role}</p>
+          <div class="meta">
+            <span class="dept">${member.dept}</span>
+            <button class="btn toggleBtn">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail" aria-hidden="true">
+        <div class="detailInner">
+          <dl>
+            <dt>Bagian</dt><dd>${member.dept}</dd>
+          </dl>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+
+    // hook toggle
+    const toggle = card.querySelector('.toggleBtn');
+    const detail = card.querySelector('.detail');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = detail.classList.contains('show');
+      if (isOpen) {
+        // close: smoothly collapse by setting max-height to current scrollHeight then 0
+        const cur = detail.scrollHeight;
+        detail.style.maxHeight = cur + 'px';
+        // allow next tick
+        requestAnimationFrame(() => {
+          detail.style.maxHeight = '0px';
+          detail.classList.remove('show');
+          detail.setAttribute('aria-hidden','true');
+          toggle.textContent = 'Lihat Detail';
+        });
+      } else {
+        // open: set max-height to scrollHeight
+        detail.classList.add('show');
+        detail.setAttribute('aria-hidden','false');
+        // temporarily set max-height to 0 to trigger transition
+        detail.style.maxHeight = '0px';
+        requestAnimationFrame(() => {
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+          toggle.textContent = 'Tutup Detail';
+        });
+      }
+    });
+
+    // remove inline style after transition ends to allow flexible height later
+    detail.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'max-height'){
+        if (detail.classList.contains('show')){
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+        } else {
+          detail.style.maxHeight = '';
+        }
+      }
+    });
+  });
+}
+
+function initials(name){
+  return name.split(' ').slice(0,2).map(s=>s.charAt(0).toUpperCase()).join('');
+}
+
+// search functionality
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  const filtered = members.filter(m => {
+    return m.name.toLowerCase().includes(q) || m.role.toLowerCase().includes(q) || m.dept.toLowerCase().includes(q);
+  });
+  render(filtered);
+});
+
+// reset button
+document.getElementById('clearBtn').addEventListener('click', () => {
+  searchInput.value = '';
+  render(members);
+});
+
+// initial render
+render(members);
+</script>
+</div>
+     
+  <!-- Akademik -->
+  <section id="akademik">
+    <h2>Akademik</h2>
+    <ul>
+      <li>Kurikulum 2013 (K13) dan Kurikulum Merdeka</li>
+    </ul>
+    </section>
+      <!-- Buat Ekstrakurikuler -->
+    <section>
+     <h2>Ekstrakurikuler</h2>
+    
+      
+        <div class="slider-container">
+    <div class="slider">
+      
+       <!-- Pramuka -->
+      <div class="slide">
+        <div class="slide-card">
+          <div class="slide-img">
+            <img src="e1.jpg" alt="Pramuka">
+          </div>
+          <div class="slide-content">
+            <h3>Pramuka</h3>
+            <p>Melatih kepemimpinan, tanggung jawab, dan semangat kebersamaan melalui kegiatan lapangan yang menantang dan menyenangkan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tapak Suci -->
+      <div class="slide">
+        <div class="slide-card">
+          <div class="slide-img">
+            <img src="e2.jpg" alt="Tapak Suci" width="100%">
+          </div>
+          <div class="slide-content">
+            <h3>Tapak Suci</h3>
+            <p>Mengembangkan disiplin dan semangat nasionalisme dengan menjadi pengibar bendera yang berwibawa dan bertanggung jawab.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marawis -->
+      <div class="slide">
+        <div class="slide-card">
+          <div class="slide-img">
+            <img src="e3.jpg" alt="Marawis">
+          </div>
+          <div class="slide-content">
+            <h3>Marawis</h3>
+            <p>Mendorong siswa untuk berpikir kritis, meneliti, dan menghasilkan ide-ide kreatif yang berguna bagi masyarakat dan dunia pendidikan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Tombol modern -->
+    <button class="slide-btn modern prev">
+      <span class="arrow">&#x2039;</span>
+    </button>
+    <button class="slide-btn modern next">
+      <span class="arrow">&#x203A;</span>
+    </button>
+  </div>
+
+  <div class="dots"></div>
+</section>
+      <!-- CSS Ekstrakurikuler -->
+      <style>
+  :root {
+  --primary: #0d6efd;
+  --light-blue: #4aa3ff;
+  --bg: #f8faff;
+  --radius: 18px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+.extracurricular-section {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--light-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  width: 90%;
+  max-width: 850px;
+  transition: transform 0.3s ease;
+}
+
+.slide-card:hover {
+  transform: translateY(-5px);
+}
+
+.slide-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-content {
+  padding: 25px 30px;
+  text-align: left;
+}
+
+.slide-content h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* Tombol modern transparan */
+.slide-btn.modern {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  backdrop-filter: blur(8px);
+  color: var(--primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide-btn.modern:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.arrow {
+  font-size: 1.8rem;
+  line-height: 0;
+}
+
+
+/* Dots navigation */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dots button {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 1000px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide-img img {
+    height: 230px;
+  }
+
+  .slide-content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .slide-btn.modern {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+</style>
+      <!-- JS Ekstrakurikuler -->
+<script>
+  const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const dotsContainer = document.querySelector(".dots");
+
+let index = 0;
+
+// Create dots
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => {
+    index = i;
+    updateSlide();
+  });
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dots button");
+
+function updateSlide() {
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % slides.length;
+  updateSlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlide();
+});
+
+// Auto-slide
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  updateSlide();
+}, 6000);
+
+</script>
+<section>
+  <h2>Jadwal Pelajaran</h2>
+  <table border="1" cellspacing="0" cellpadding="10" class="jadwal">
+    <thead>
+      <tr>
+        <th>Hari</th>
+        <th>Waktu</th>
+        <th>Kegiatan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Senin</td>
+        <td>07:15 - 13:30</td>
+        <td>Upacara - Pulang</td>
+      </tr>
+      <tr>
+        <td>Selasa</td>
+        <td>07:15 - 13:30</td>
+        <td>Senam Pagi - Pulang</td>
+      </tr>
+      <tr>
+        <td>Rabu</td>
+        <td>07:15 - 12:55</td>
+        <td>Tadarus - Pulang</td>
+      </tr>
+      <tr>
+        <td>Kamis</td>
+        <td>07:15 - 12:55</td>
+        <td>Tadarus - Pulang</td>
+      </tr>
+      <tr>
+        <td>Jumat</td>
+        <td>07:15 - 11:10</td>
+        <td>Muhadoroh - Pulang</td>
+      </tr>
+      <tr>
+        <td>Sabtu</td>
+        <td>07:15 - 11:25</td>
+        <td>Tadarus - Pulang</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+  <!-- Kesiswaan -->
+  <section id="kesiswaan">
+    <h2>Kesiswaan</h2>
+  <title>Kegiatan & Prestasi</title>
+</head>
+<body>
+  <section class="kegiatan-section" id="kegiatan">
+    <div class="card">
+      <h2>Kegiatan OSIS / Ekstrakurikuler</h2>
+      <ul class="kegiatan-list">
+        <li>Tapak Suci — Latihan rutin tiap Kamis</li>
+        <li>Marawis — Latihan musik Islami</li>
+        <li>Pramuka — kegiatan berkemah & pelantikan</li>
+        <li>Olahraga — futsal, voli, dan basket</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Prestasi Siswa</h2>
+      <ul class="prestasi-list">
+        <li>Juara 1 Lomba Tacan</li>
+        <li>Juara 2 Lomba Tenyaho</li>
+        <li>Juara 2 Lomba Kehela</li>
+        <li>Peringkat Terbaik Naen</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Galeri Foto Kegiatan</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="o1.jpg" alt="Perayaan 17 Agustus" />
+        </div>
+        <div class="gallery-item">
+          <img src="o2.jpg" alt="Sesudah Kegiatan 17 Agustus" />
+        </div>
+        <div class="gallery-item">
+          <img src="u3.jpg" alt="Upacara MOP" />
+        </div>
+        <div class="gallery-item">
+          <img src="e4.jpg" alt="Ektrakulikuler Tapak Suci" />
+        </div>
+        <!-- Tambah foto lainnya -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PPDB -->
+  <section id="ppdb">
+<body>
+   <h2>Penerimaan Peserta Didik Baru</h2>
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Lengkapi Formulir Berikut</h2>
+      <form id="formDaftar" action="#" method="post">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="asal">Asal Sekolah</label>
+          <input type="text" id="asal" name="asal" placeholder="Asal sekolah" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-submit">Daftar</button>
+        </div>
+
+        <div id="msg" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('formDaftar').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      document.getElementById('msg').textContent =
+        "Terima kasih, " + nama + ". Pendaftaran Anda telah dikirim.";
+      this.reset();
+    });
+  </script>
+  </section>
+
+  <!-- Berita -->
+  <section id="berita">
+    <h2>Berita & Pengumuman</h2>
+      <div class="news-list">
+      <div class="news-item">
+        <div class="meta">13 Agustus 2025</div>
+    <h3>Juara 2 Lomba Gerak Jalan</h3>
+    <style>
+  
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+  }
+
+  button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+  /* Bagian tersembunyi */
+  .more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+  }
+
+  .more-content.show {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .more-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+  
+    <p>
+      Siswi MA Zainabiyah berhasil merebut Juara 2 Lomba Gerak Jalan pada hari perayaan 17 Agustus di tingkat Kecamatan.   </p>
+
+    <button id="toggleBtn">Baca Selengkapnya ↓</button>
+
+    <div class="more-content" id="moreContent">
+      <p>
+        Prestasi gemilang diraih tim Gerak Jalan Siswi MA Zainabiyah yang berhasil membawa pulang trofi juara berkat latihan, kekompakan, dan kedisiplinan tinggi.</p>
+      <img src="jlg.jpg" alt="foto juara">
+    </div>
+  </div>
+
+<script>
+  const btn = document.getElementById('toggleBtn');
+  const content = document.getElementById('moreContent');
+  let open = false;
+
+  btn.addEventListener('click', () => {
+    open = !open;
+    content.classList.toggle('show', open);
+    btn.textContent = open ? 'Tutup ↑' : 'Baca Selengkapnya ↓';
+  });
+</script>
+    
+    
+    </div>
+  </div> <br>
+        <div>
+    <div class="news-list">
+      <div class="news-item">
+        <div class="meta">20 Desember 2025</div>
+        <h3>Libur Semester & Pengumuman Resmi</h3>
+        <p>Libur semester akan dilaksanakan mulai tanggal 20 Desember hingga 3 Januari. Berikut pengumuman resmi dari pihak sekolah.</p>
+        
+</div>
+      <!-- Tambah berita lainnya sesuai kebutuhan -->
+    
+        
+
+
+    </div>
+   </section>
+   
+  <!-- Kontak -->
+  <section id="kontak">
+    <h2>Kontak</h2>
+   <!-- Lokasi -->
+    <div class="kontak-card">
+      <div class="icon bg-orange">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Lokasi">
+      </div>
+      <div class="kontak-info">
+        <h3>Alamat</h3>
+        <p>Jl. Raya Pagelaran-Montor Km.03, Kp. Kapinango, Desa Kartasana, Kecamatan Pagelaran, Kabupaten Pandeglang, Provinsi Banten</p>
+      </div>
+    </div>
+    <br>
+    <!-- WhatsApp -->
+    <div class="kontak-card">
+      <div class="icon bg-green">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </div>
+      <div class="kontak-info">
+        <h3>WhatsApp</h3>
+        <p>+62 838-7422-9364</p>
+      </div>
+    </div>
+    <br>
+    <!-- Email -->
+    <div class="kontak-card">
+      <div class="icon bg-blue">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+      </div>
+      <div class="kontak-info">
+        <h3>Email</h3>
+        <p>algiaja2024@gmail.com</p>
+      </div>
+    </div>
+  <!-- Peta -->
+    <p><b>Peta Lokasi:</b> <br>  <iframe width="100%" height="100px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?q=ma%20Zainabiyah&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+      <style>
+      body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Section */
+.kontak-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #ffffff, #eef3f9);
+}
+
+.kontak-section h2 {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+}
+
+.subtext {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+/* Container */
+.kontak-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Card */
+.kontak-card {
+  background: white;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.1);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kontak-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Warna ikon */
+.bg-green { background: #25D366; }
+.bg-blue { background: #007bff; }
+.bg-orange { background: #ff9800; }
+
+/* Info */
+.kontak-info h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1e3a8a;
+}
+
+.kontak-info p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 3px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .kontak-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .kontak-card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+      </style>
+      </section>
+      
+  </div>
+      <!-- Footer -->
+  <footer>
+  <p>&copy; 2025 MA ZAINABIYAH | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
